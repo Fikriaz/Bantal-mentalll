@@ -28,6 +28,10 @@ import javafx.stage.Stage;
  */
 public class DashboardController implements Initializable {
 
+    
+    @FXML
+    private Button Dashboard;
+    
     @FXML
     private Button Lihatsemua;
 
@@ -63,8 +67,24 @@ public class DashboardController implements Initializable {
 
     OpenScene bukaScene = new OpenScene();
 
-    
 
+     @FXML
+    private void scene8(ActionEvent event) throws IOException {
+        Parent scene8 = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
+        Scene scene = new Scene(scene8);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
+        stage.close();
+        
+    }
+    
+//     @FXML
+//    private void dashboard(ActionEvent event) throws IOException {
+//        Pane halaman = bukaScene.getPane("Dashboard");
+//        mainPane.setCenter(halaman);
+//    }
+    
    @FXML
     private void mantauperkembangan(ActionEvent event) throws IOException {
         Pane halaman = bukaScene.getPane("FXMLMemantauPerkembangan");
